@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('Exécuter les tests') {
+        stage('Tests') {
             steps {
                 script {
                     if (isUnix()) {
