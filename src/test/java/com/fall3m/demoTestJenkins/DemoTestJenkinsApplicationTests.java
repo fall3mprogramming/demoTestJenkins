@@ -1,5 +1,7 @@
 package com.fall3m.demoTestJenkins;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -7,7 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoTestJenkinsApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+    public void testAddition() {
+        int result = 1 + 1;
+        assertEquals(2, result, "1 + 1 devrait être égal à 2");
+    }
+
 
 }
