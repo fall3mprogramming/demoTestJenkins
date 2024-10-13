@@ -42,9 +42,13 @@ pipeline {
                     if (isUnix()) {
                         // Commande pour les systèmes Unix
                         sh 'mvn package'
+                         // Archiver l'artefact pour Unix
+                        archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: false
                     } else {
                         // Commande pour les systèmes Windows
                         bat 'mvn package'
+                         // Archiver l'artefact pour Windows
+                        archiveArtifacts artifacts: 'target\\*.jar', allowEmptyArchive: false
                     }
                 }
             }
