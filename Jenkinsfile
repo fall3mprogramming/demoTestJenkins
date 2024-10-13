@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Construire avec Maven') {
+        stage('Build') {
             steps {
                 script {
                     if (isUnix()) {
