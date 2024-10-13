@@ -26,9 +26,11 @@ pipeline {
                     if (isUnix()) {
                         // Commande pour les systèmes Unix
                         sh 'mvn test'
+                        junit 'target/surefire-reports/*.xml'
                     } else {
                         // Commande pour les systèmes Windows
                         bat 'mvn test'
+                        junit 'target\\surefire-reports\\*.xml'
                     }
                 }
             }
