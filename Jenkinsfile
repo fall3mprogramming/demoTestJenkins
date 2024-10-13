@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    tools{
+        maven 'apache-maven-3.9.9' // Le nom de la version de Maven que tu as configurée dans Jenkins
+    }
     stages {
 
         stage('Construire avec Maven') {
